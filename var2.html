@@ -17,12 +17,20 @@
 
 <script language="javascript">
     'use strict';
-    var arr = [["Лодка Казанка", 1, 5600], ["Лодка Обь", 2, 4300], ["Лодка Неман", 3, 3500]];
-    var arr2 = [];
-        arr.forEach(function(item, i, arr) {
-            alert( );
-        });
-    countBasketPrice ()
+    var boat = 0;
+        arr = [
+            [name:'Объ', price: 3600], 
+            [name:'Казанка', price: 7200]];
+        arr.push({name:'Неман 2', price: 4800});
+        
+    function countBasketPrice(x) {
+            for (i=0; i<arr.length; i++) { 
+            boat = boat + arr[i].price;
+    }
+    return boat;
+}
+console.log(boat);
+    
 </script>
 
 <a href="index.html"><input id="elem" type="button" value="На главную"></a>
