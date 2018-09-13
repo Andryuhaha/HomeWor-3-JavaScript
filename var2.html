@@ -17,19 +17,23 @@
 
 <script language="javascript">
     'use strict';
-    var boat = 0;
-        arr = [
-            [name:'Объ', price: 3600], 
-            [name:'Казанка', price: 7200]];
-        arr.push({name:'Неман 2', price: 4800});
+   
+    var    basket = [
+            {name:'Объ', amount: 1, price: 3600}, 
+            {name:'Казанка', amount: 2, price: 7200},
+            {name:'Неман 2', amount: 1, price: 4800}
+    ];
+
         
-    function countBasketPrice(x) {
-            for (i=0; i<arr.length; i++) { 
-            boat = boat + arr[i].price;
+    function countBasketPrice(bsk) {
+            let sum = 0;
+            for (let i = 0; i<bsk.length; i++) { 
+            sum = sum + bsk[i].price*bsk[i].amount;
     }
-    return boat;
+    return sum;
+        
 }
-console.log(boat);
+console.log(countBasketPrice(basket));
     
 </script>
 
